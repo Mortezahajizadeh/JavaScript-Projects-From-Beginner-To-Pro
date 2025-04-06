@@ -57,8 +57,13 @@
                 return `${length * 1.6} km`;
                 
             } else if (from === to) {
+                
                 return `${length} ${to}`;
-            }
+
+            } else if (from !== 'km' && from !== 'miles') {
+
+                return `Invalid unit :${from}`;
+            } 
         }
 
         console.log(convertlength(50, 'miles', 'km'));
